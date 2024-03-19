@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+    <title>Ozero</title>
+    
+</head>
+
+<body>
+  
+
+    <!-- Nav Bar -->
+    <div class="nav-bar-section">
+        <div class="container nav-bar flex">
+            <a href="#" class="company-logo flex">
+                <img src="/assets/logo.png" alt="company logo" width="180px">
+                <li><a href="/login/sign-up.html" class="get-listed-btn"><i class="fa-solid fa-user-doctor"></i>Get Listed</a></li>
+               
+            </a>
+            <div class="menu" id="menu-link">
+                <ul class="flex">
+                 
+                    <li><a href="#" class="hover-link help-btn"><i class="fa-solid fa-phone"></i></i>Need Help</a></li>
+                    <div class="popup" id="popup">
+                        <div class="popup-content">
+                          <a href="#" class="close-btn" onclick="closePopup()">&times;</a>
+                          <ul>
+                            <li><a href="#" onclick="openWhatsApp()" class="hover-link help-contact-btn"><i class="fa-brands fa-square-whatsapp"></i></a>Whatsapp</li>
+                            <li><a href="#" onclick="callNumber()" class="hover-link help-contact-btn"><i class="fa-solid fa-phone"></i></a>Phone</li>
+                            <li><a href="#" onclick="sendMail()" class="hover-link profile-btn"><i class="fa-solid fa-envelope"></i></a>Mail</li>
+                          </ul>
+                        </div>
+                      </div>
+                      
+                    <li><a href="/login/sign-login.html" class="hover-link secondary-btn">Login/Signup</a></li>
+                    
+                    <li><a href="#" class="hover-link acc-btn"><i class="fa-regular fa-user"></i> Account</a></li>
+                    <div class="popup1" id="popup1">
+                        <div class="popup-content1">
+                          <a href="#" class="close-btn1" onclick="closePopup1()">&times;</a>
+                          <ul>
+                            <li><a href="/login/login.html" class="hover-link  acc-btn1"><i class="fa-regular fa-user"></i>My Profile</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-regular fa-bookmark"></i>Saved</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-regular fa-bell"></i>Notifications</a></li>
+                           <li><a href="#"  class="hover-link acc-btn1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    
+                  
+                  
+                </ul>
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-section flex">
+            <div class="header-left">
+                <h1>Book appointment</h1>
+                <p> We believe in empowering our users with the most accurate, 
+                    comprehensive, and curated information and care, 
+                     enabling them to make better healthcare decisions.</p>
+                <a href="/booking/booking.html" class="primary-btn">Book Now</a>
+            </div>
+            <div class="header-right">
+                <img src="/assets/asset 2.png" alt="hero image" width="100%">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Companies Section -->
+    <section class="companies-section">
+        <div class="container">
+            <div class="small-text">
+                Collaboration with inda's top hospitals
+            </div>
+            <div class="flex company-image-section">
+                <img src="/assets/hospitals/blk.png" alt="Blk hospital" width="150">
+                <img src="/assets/hospitals/max.png" alt="max hospital" width="150">
+                <img src="/assets/hospitals/fortis.png" alt="fortis hospital" width="150">
+                <img src="/assets/hospitals/medanta.png" alt="medanta" width="170">
+                <img src="/assets/hospitals/prime.png" alt="prime" width="150">
+                <img src="/assets/hospitals/batra.png" alt="batra" width="150">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-header">
+                <h2>Book an appointment for an in-clinic consultation</h2>
+                <a href="/booking/booking.html" class="feature-btn hover-link">View All</a>
+            </div>
+
+            <div class="features-area flex">
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/teeth11.png" alt="" width="100px">
+                    <h3>Dentist</h3>
+                    <p>Teething trouble? schedule a dental checkup</p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/women11.png" alt="" width="100px">
+                    <h3>Gynecologist/Obstetrician</h3>
+                    <p>Explore for women,s health,pregnancy and infertility treatments</p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/diet11.png" alt="" width="170px">
+                    <h3>Diettian/Nutrition</h3>
+                    <p>Get guidance on eating right,weight management and sport nutrition</p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/physo11.png" alt="" width="100px">
+                    <h3>Physiotherapist</h3>
+                    <p>Pulled a muscle? Get it treated by a trained physiotherapist </p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/surgery.png" alt="" width="100px">
+                    <h3>General surgeon</h3>
+                    <p>Need to get operated? Find the right surgeon</p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+                <div class="features-card flex">
+                    <img src="/assets/featureimage/bone22.png" alt="" width="170px">
+                    <h3>Orthopedist</h3>
+                    <p>For Bone and Joints issues,spinal injuries and more</p>
+                    <a href="/booking/booking.html" class="feature-btn hover-link">Book</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Big Feature Sections -->
+    <section class="big-feature-section">
+        <div class="container flex big-feature">
+            <div class="big-feature-img">
+                <img src="/assets/featureimage/verified-done.png" alt="">
+            </div>
+            <div class="big-feature-desc flex">
+              
+                <h2>Verified doctors</h2>
+                <p>All doctor, clinics, hospitals on our platform are verified for their authenticity we follow strict verification proccess to ensure reliability</p>
+                <img src="/assets/logo.png" alt="" width="100px">
+                <h4>Our team ensures that each and every listing on our platform are verified for their authenticity no listings can be done without Verification </h4>
+                <div class="author-desc flex">
+                    <img src="/assets/asset 20.png" alt="" width="50px">
+                    <div class="author-name flex">
+                        <h4>Vishal Rao</h4>
+                        <p class="post">Chief Verification Officer Ozero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container flex big-feature" id="big-feature-mid">
+            <div class="big-feature-img1">
+                <img src="/assets/featureimage/customer-support3.png" alt="" width="200px">
+            </div>
+            <div class="big-feature-desc flex">
+                
+                <h2>24*7 customer support</h2>
+                <p>Ozero provide industry leading 24*7 customer support to ensure that each and every query of customer is resolved  </p>
+                <img src="/assets/logo.png" alt="" width="100px">
+                <h4>Our customer support team provides 24*7 uninterrupted support we ensures that each and every customer query is resolved as soon as posible</h4>
+                <div class="author-desc flex">
+                    <img src="/assets/asset 23.png" alt="" width="50px">
+                    <div class="author-name flex">
+                        <h4>Pankaj Yadav</h4>
+                        <p class="post">Chief Customer Officer Ozero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="big-feature-section">
+        <div class="container flex big-feature">
+            <div class="big-feature-img2">
+                <img src="/assets/featureimage/presence-1.png" alt="">
+            </div>
+            <div class="big-feature-desc flex">
+                
+                <h2>Our presence</h2>
+                <p>Ozero is live in 20+ major indian cities and we are adding more cities to ensure that people accross india can use our services  </p>
+                <img src="/assets/logo.png" alt="" width="120px">
+                <h4>We are currently available in 20+ major indian cities we are working on expanding our operations accross india</h4>
+                <div class="author-desc flex">
+                    <img src="/assets/asset 26.png" alt="" width="50px">
+                    <div class="author-name flex">
+                        <h4>Sahan Shetty</h4>
+                        <p class="post">CEO and Founder Ozero</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- review section -->
+
+<div class="header1">
+        <div class="container1">
+          <div class="container__left">
+            <h1>What our users have to say</h1>
+            <p>
+                It is the journey that takes you to new destinations every day with endless possibilities of life on the back of happiness, energy, and hope. Ozero wants to make this journey easy for every Indian and help them live healthier and longer lives.
+            </p>
+           
+          </div>
+          <div class="container__right">
+            <div class="card">
+              <img src="/assets/reviewimage/men1.jpg" alt="user" />
+              <div class="card__content">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <div class="card__details">
+                  <p>
+                    Very good app. Well thought out about 
+                    booking/rescheduling/canceling an appointment.
+                     Also, Doctor's feedback mechanism is good and describes all the basics in a good way
+                  </p>
+                  <h4>- Rajesh yadav</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="/assets/reviewimage/men2.jpeg" alt="user" />
+              <div class="card__content">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <div class="card__details">
+                  <p>
+                    Very helpful.  Allows quick and easy search with speedy
+                    booking. Even maintains history of doctors visited.
+                  </p>
+                  <h4>- Nandan sharma</h4>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="/assets/reviewimage/women1.jpeg" alt="user" />
+              <div class="card__content">
+                <span><i class="ri-double-quotes-l"></i></span>
+                <div class="card__details">
+                  <p>
+                    Very easy to book,maintain history. Hassle free from older versions of booking appointment via telephone..
+                     Thanks Ozero for making it simple.
+                  </p>
+                  <h4>- savita verma</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container flex cta">
+            <h1>Join 5000+ clinics & hospitals already on Ozero</h1>
+            <p>A product designed for clinics and hospitals that assists in growing your practice and enhancing the overall patient visit experience.</p>
+            <li><a href="/login/sign-up.html" class="get-listed-btn2"><i class="fa-solid fa-user-doctor"></i>Get Listed</a></li>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-section flex">
+            <div class="company-logo">
+                <img src="/assets/logo.png" alt="company-logo" width="160px">
+            </div>
+        
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a href="/login/login.html" class="hover-link">Search for doctors</a>
+                <a href="/login/login.html" class="hover-link">Search for clinkcs</a>
+                <a href="/login/login.html" class="hover-link">Search for hospitals</a>
+                <a href="/login/login.html" class="hover-link">Full body checkup</a>
+                <a href="/login/login.html" class="hover-link">Book test</a>
+                
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Sub Footer -->
+    <div class="subfooter">
+        <div class="container subfooter-container flex">
+            <div class="subfooter-options flex">
+                <a href="" class="hover-link">Privacy policy</a>
+                <a href="" class="hover-link">Terms & conditions</a>
+                <a href="" class="hover-link">Security information</a>
+            </div>
+            <div class="social-media flex">
+                <a href="#"><img src="/assets/subfooter-image/asset 28.png" alt="facebook" width="50%"></a>
+                <a href="#"><img src="/assets/subfooter-image/asset 29.png" alt="twitter" width="50%"></a>
+                <a href="#"><img src="/assets/subfooter-image/asset 30.png" alt="linkedin" width="50%"></a>
+                <a href="#"><img src="/assets/subfooter-image/asset 31.png" alt="youtube" width="50%"></a>
+            </div>
+        </div>
+    </div>
+
+     
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>

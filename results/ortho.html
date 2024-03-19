@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <title>Doctor-profile</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+/* Resets */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-text-color: #0b2233;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+    --padding-inline-section: 20px;
+}
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    color: var(--primary-text-color);
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 1.7rem;
+}
+
+h3{
+    font-size: 1.4rem;
+}
+
+p{
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    color: var(--secondary-text-color);
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/* Utility */
+.container{
+    max-width: 1250px;
+    margin-inline: auto; 
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.hover-link{
+    color: var(--primary-text-color);
+    transition: 0.2s ease-out;
+}
+
+.hover-link:hover{
+    color: var(--accent-color);
+}
+
+.primary-btn{
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    padding: 10px 24px;
+    color: white !important;
+    font-weight: 600;
+    transition: 0.2s ease-out;
+}
+
+.primary-btn:hover{
+    background-color: var(--accent-color-dark);
+}
+
+.secondary-btn{
+    border-radius: 4px;
+    padding: 10px 24px;
+    font-weight: 600;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+}
+
+.secondary-btn:hover{
+    border-color: var(--accent-color);
+}
+
+
+
+
+/* Nav Bar */
+.get-listed-btn{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: lightgreen;
+    margin-left: -200px;
+}
+
+.help-btn{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: orange;
+    margin-left: 100px;
+    
+}
+
+.profile-btn{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.help-contact-btn{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: white;
+}
+
+.secondary-btn{
+    display: flex;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    height: 45px;
+    width: 200px;
+    color: white !important;
+    font-weight: 300;
+    box-shadow: 0 1px 2px var(--secondary-text-color); 
+    transition: 0.2s ease-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc-btn{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.acc-btn1{
+    border-radius: 4px;
+    border: 0.5px solid #b9cde4;
+    transition: 0.2s ease-out;
+    height: 45px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.nav-bar{
+    margin-top: 25px;
+    justify-content: space-between;    
+    position: relative;
+}
+
+
+
+.menu{
+    flex-basis: 630px;
+}
+
+.menu ul {
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.nav-toggle{
+    display: none;
+}
+
+/* Footer */
+footer{
+    background-color: #ebf2fa;
+    padding: 80px var(--padding-inline-section) 80px;
+    justify-content: space-around;
+    
+    
+}
+
+.footer-section{
+    
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.link-column{
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 10px;
+}
+
+.link-column a{
+    color: #586d7f;
+}
+
+/* Sub Footer */
+.subfooter{
+    background-color: #b9cde4;
+    padding: 20px 60px 20px;
+    font-size: 0.9rem;
+}
+
+.subfooter-container{
+    justify-content: space-evenly;
+}
+
+.subfooter-options{
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.social-media{
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/*profile*/
+
+.profile {
+    margin: 20px auto;
+    width: calc(70% - 20px); 
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px; 
+    overflow: hidden; 
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px; 
+  }
+
+  .profile-info {
+    display: inline-block; 
+    vertical-align: top; 
+  }
+
+  .book-now {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .book-now button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .book-now button:hover {
+    background-color: #45a049;
+  }
+
+
+  /*popup*/
+
+  .popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 150px;
+    margin-left: 75px;
+    width:150px;
+    
+  }
+  
+  
+  .popup-content {
+    text-align: center;
+    gap: 25px;
+    font-size: 1rem;
+    display: flex;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    color: blue;
+  }
+  
+  /*popup2*/
+  .popup1 {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 170px;
+    margin-left: 80px;
+    width:300px;
+    
+  }
+  
+  
+  .popup-content1 {
+    text-align: center;
+    gap: 25px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .close-btn1 {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    color: blue;
+  }
+ 
+.header1 {
+    background-image: url("/reviewimage/bg.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+  }
+  
+  
+  .container1 {
+   
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10rem;
+  }
+  
+  .container__left h1 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+  }
+  
+  .container__left p {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .container__left button {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+      to right,
+      var(--primary-color),
+      var(--primary-color-dark)
+    );
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .container__right {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  .card {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .card img {
+    max-width: 75px;
+    border-radius: 100%;
+  }
+  
+  .card__content {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .card__content span i {
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .card__details p {
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+  
+  .card__details h4 {
+    text-align: right;
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+    </style>
+</head>
+
+<body>
+   
+
+    <!-- Nav Bar -->
+    <div class="nav-bar-section">
+        <div class="container nav-bar flex">
+            <a href="#" class="company-logo flex">
+              <a href="/home/index.html"></a>  <img src="/assets/logo.png" alt="company logo" width="180px"></a>
+                
+            </a>
+            <div class="menu" id="menu-link">
+                <ul class="flex">
+                    <li><a href="#" class="hover-link help-btn"><i class="fa-solid fa-phone"></i></i>Need Help</a></li>
+                    <div class="popup" id="popup">
+                        <div class="popup-content">
+                          <a href="#" class="close-btn" onclick="closePopup()">&times;</a>
+                          <ul>
+                            <li><a href="#" onclick="openWhatsApp()" class="hover-link help-contact-btn"><i class="fa-brands fa-square-whatsapp"></i></a>Whatsapp</li>
+                            <li><a href="#" onclick="callNumber()" class="hover-link help-contact-btn"><i class="fa-solid fa-phone"></i></a>Phone</li>
+                            <li><a href="#" onclick="sendMail()" class="hover-link profile-btn"><i class="fa-solid fa-envelope"></i></a>Mail</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      
+                    <li><a href="/login/login.html" class="hover-link secondary-btn">Login/Signup</a></li>
+                    <li><a href="#" class="hover-link acc-btn"><i class="fa-regular fa-user"></i> Account</a></li>
+
+                    <div class="popup1" id="popup1">
+                        <div class="popup-content1">
+                          <a href="#" class="close-btn1" onclick="closePopup1()">&times;</a>
+                          <ul>
+                            <li><a href="/login/login.html" class="hover-link  acc-btn1"><i class="fa-regular fa-user"></i>My Profile</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-solid fa-clock-rotate-left"></i>History</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-regular fa-bookmark"></i>Saved</a></li>
+                            <li><a href="/login/login.html"  class="hover-link acc-btn1"><i class="fa-regular fa-bell"></i>Notifications</a></li>
+                           <li><a href="#"  class="hover-link acc-btn1"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <li><a href="/booking/booking.html" class="hover-link secondary-btn"><i class="fa-solid fa-magnifying-glass"></i>Search doctors</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <img src="./assets/asset 43.png" alt="" width="20px">
+            </a>
+        </div>
+    </div>
+
+    <div class="profile">
+        <img src="/assets/doctor-image/men-doc/2.jpeg" alt="Doctor Image">
+        <div class="profile-info">
+          <h2>Dr. Ramesh shetty</h2>
+          <p>Orthopedist</p>
+          <p>Experience: 14 years</p>
+          <p>Consultation Fees: 400</p>
+          <p>Ratings: ★★★★★</p>
+          <div class="book-now">
+            <a href="/login/login.html">  <button>Book Now</button></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile">
+          <img src="/assets/doctor-image/men-doc/3.jpeg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Narendra Yadav</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 15 years</p>
+            <p>Consultation Fees: 300</p>
+            <p>Ratings: ★★★★</p>
+            <div class="book-now">
+            <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/men-doc/4.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Abdul Khan</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 16 years</p>
+            <p>Consultation Fees: 500</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/men-doc/5.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Jayesh Pandey</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 20 years</p>
+            <p>Consultation Fees: 600</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/men-doc/6.jpeg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Uday Poojary</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 25 years</p>
+            <p>Consultation Fees: 400</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/men-doc/7.jpeg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Narendra Kumar</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 20 years</p>
+            <p>Consultation Fees: 450</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/women-doc/1.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Shilpa KS</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 14 years</p>
+            <p>Consultation Fees: 560</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/women-doc/2.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Nirmala Shetty</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 17 years</p>
+            <p>Consultation Fees: 450</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/women-doc/3.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Archana Pandey</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 10 years</p>
+            <p>Consultation Fees: 400</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/women-doc/4.jpeg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Sujata Panth</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 12 years</p>
+            <p>Consultation Fees: 500</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+                <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+        <div class="profile">
+          <img src="/assets/doctor-image/women-doc/5.jpg" alt="Doctor Image">
+          <div class="profile-info">
+            <h2>Dr. Ananya Mishra</h2>
+            <p>Orthopedist</p>
+            <p>Experience: 8 years</p>
+            <p>Consultation Fees: 400</p>
+            <p>Ratings: ★★★★★</p>
+            <div class="book-now">
+              <a href="/login/login.html">  <button>Book Now</button></a>
+            </div>
+          </div>
+        </div>
+      
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-section flex">
+            <div class="company-logo">
+                <img src="/assets/logo.png" alt="company-logo" width="160px">
+            </div>
+            <div class="link-column flex">
+                <h4>Resources</h4>
+                <a href="/login/login.html" class="hover-link">Search for doctors</a>
+                <a href="/login/login.html" class="hover-link">Search for clinkcs</a>
+                <a href="/login/login.html" class="hover-link">Search for hospitals</a>
+                <a href="/login/login.html" class="hover-link">Full body checkup</a>
+                <a href="/login/login.html" class="hover-link">Book test</a>
+                
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Sub Footer -->
+    <div class="subfooter">
+        <div class="container subfooter-container flex">
+            <div class="subfooter-options flex">
+                <a href="" class="hover-link">Privacy policy</a>
+                <a href="" class="hover-link">Terms & conditions</a>
+                <a href="" class="hover-link">Security information</a>
+            </div>
+            <div class="social-media flex">
+                <a href=""><img src="/assets/subfooter-image/asset 28.png" alt="facebook" width="50%"></a>
+                <a href=""><img src="/assets/subfooter-image/asset 29.png" alt="twitter" width="50%"></a>
+                <a href=""><img src="/assets/subfooter-image/asset 30.png" alt="linkedin" width="50%"></a>
+                <a href=""><img src="/assets/subfooter-image/asset 31.png" alt="youtube" width="50%"></a>
+            </div>
+        </div>
+    </div>
+
+    <script>function openPopup(event) {
+      var popup = document.getElementById("popup");
+      var helpBtn = event.currentTarget;
+      var rect = helpBtn.getBoundingClientRect();
+      popup.style.top = rect.bottom + "px";
+      popup.style.left = rect.left + "px";
+      popup.style.display = "block";
+    
+     
+      document.addEventListener('click', closePopupOutside);
+    }
+    
+    function closePopup() {
+      var popup = document.getElementById("popup");
+      popup.style.display = "none";
+    
+   
+      document.removeEventListener('click', closePopupOutside);
+    }
+    
+    function closePopupOutside(event) {
+      var popup = document.getElementById("popup");
+      var targetElement = event.target;
+    
+   
+      if (!popup.contains(targetElement) && targetElement !== document.querySelector('.help-btn')) {
+        closePopup();
+      }
+    }
+    
+    function openWhatsApp() {
+    
+      window.open('whatsapp://send?phone=123456789');
+    }
+    
+    function callNumber() {
+    
+      window.open('tel:123456789');
+    }
+    
+    function sendMail() {
+   
+      window.open('mailto:example@example.com');
+    }
+    
+    document.querySelector('.help-btn').addEventListener('click', openPopup);
+    
+    /*popup account */
+    
+    function openPopup1(event) {
+      var popup1 = document.getElementById("popup1");
+      var accbtn = event.currentTarget;
+      var rect = accbtn.getBoundingClientRect();
+      popup1.style.top = rect.bottom + "px";
+      popup1.style.left = rect.left + "px";
+      popup1.style.display = "block";
+    
+      
+      document.addEventListener('click', closePopupOutside);
+    }
+    
+    function closePopup1() {
+      var popup1 = document.getElementById("popup1");
+      popup1.style.display = "none";
+    
+   
+      document.removeEventListener('click', closePopupOutside);
+    }
+    
+    function closePopupOutside1(event) {
+      var popup1 = document.getElementById("popup1");
+      var targetElement = event.target;
+    
+   
+      if (!popup1.contains(targetElement) && targetElement !== document.querySelector('.acc-btn')) {
+        closePopup1();
+      }
+    }
+    
+    function openWhatsApp() {
+      
+      window.open('whatsapp://send?phone=123456789');
+    }
+    
+    function callNumber() {
+      
+      window.open('tel:123456789');
+    }
+    
+    function sendMail() {
+     
+      window.open('mailto:example@example.com');
+    }
+    
+    document.querySelector('.acc-btn').addEventListener('click', openPopup1);
+    
+    
+    
+    
+    
+    </script>
+
+
+
+</body>
+
+</html>
